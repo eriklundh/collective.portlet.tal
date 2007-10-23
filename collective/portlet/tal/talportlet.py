@@ -55,10 +55,10 @@ class ITALPortlet(IPortletDataProvider):
 class Assignment(base.Assignment):
     implements(ITALPortlet)
 
-    title = u""
-    pt = ZopePageTemplate(id='__tal_portlet__')
+    title = u"" # overrides the readonly property method from the base class
 
     def __init__(self, title=u"", tal=u""):
+        self.pt = ZopePageTemplate(id='__tal_portlet__')
         self.title = title
         self.tal = tal
         
