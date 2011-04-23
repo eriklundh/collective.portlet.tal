@@ -22,7 +22,7 @@ as if it came from a page template""",
       url='http://plone.org',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['collective.portlet'],
+      namespace_packages=['collective', 'collective.portlet'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
