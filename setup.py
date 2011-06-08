@@ -4,9 +4,9 @@ version = '1.0'
 
 setup(name='collective.portlet.tal',
       version=version,
-      description="TAL portlet for Plone 3",
+      description="TAL portlet for Plone 3 and 4",
       long_description="""\
-This portlet allows you to enter TAL into a text area, which is then executed 
+This portlet allows you to enter TAL into a text area, which is then executed
 as if it came from a page template""",
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -27,7 +27,8 @@ as if it came from a page template""",
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'Products.CMFPlone',
+          'Products.PloneTestCase',
       ],
       entry_points="""
       # -*- Entry points: -*-
