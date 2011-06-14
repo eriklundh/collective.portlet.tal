@@ -4,7 +4,7 @@ Changelog for collective.portlet.tal
 
 collective.portlet.tal - Unreleased Jun 08, 2011
     - Updated for Plone 4.1 compatibility
-      [saiba, hvelarde]
+      [saibatizoku, hvelarde]
 
 collective.portlet.tal - 1.0 Released Sep 09, 2008
 
