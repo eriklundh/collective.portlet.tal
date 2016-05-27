@@ -12,6 +12,10 @@ from Acquisition import aq_inner, aq_base
 
 from Products.PageTemplates.ZopePageTemplate import ZopePageTemplate
 
+from Products.CMFPlone.utils import getFSVersionTuple
+
+PLONE4 = getFSVersionTuple()[0] <= 4
+
 class ITALPortlet(IPortletDataProvider):
     """A TAL portlet - allows TAL code to be entered in the browser and
     executed.
@@ -76,10 +80,16 @@ class Renderer(base.Renderer):
         return pt()
         
 class AddForm(base.AddForm):
-    form_fields = form.Fields(ITALPortlet)
+    if PLONE4:
+        form_fields = form.Fields(ITALPortlet)
+    else:
+        schema = ITALPortlet
 
     def create(self, data):
         return Assignment(**data)
 
 class EditForm(base.EditForm):
-    form_fields = form.Fields(ITALPortlet)
+    if PLONE4:
+        form_fields = form.Fields(ITALPortlet)
+    else:
+        schema = ITALPortlet

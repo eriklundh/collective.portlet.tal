@@ -6,7 +6,7 @@
  <portlet
    addview="collective.portlet.tal.TALPortlet"
    title="TAL Portlet"
-   description="TAL portlet for Plone 3"
+   description="TAL portlet for Plone 5"
    />
  
 </portlets>
