@@ -28,9 +28,7 @@ class ITALPortlet(IPortletDataProvider):
     tal = schema.Text(title=_(u"TAL code"),
                       description=_(u"TAL code which will be executed when the portlet is rendered"),
                       required=True, default=u"""\
-<dl class="portlet portlet${portlet_type_name}"
-    tal:define="portal_state context/@@plone_portal_state;
-                context_state context/@@plone_context_state;">
+<dl>
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
