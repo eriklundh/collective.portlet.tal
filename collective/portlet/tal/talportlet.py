@@ -68,8 +68,10 @@ class Assignment(base.Assignment):
         
     def _get_tal(self):
         return self.pt.read()
+
     def _set_tal(self, value):
         self.pt.pt_edit(value, 'text/html')
+
     tal = property(_get_tal, _set_tal)
 
 class Renderer(base.Renderer):
